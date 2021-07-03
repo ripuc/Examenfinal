@@ -29,19 +29,19 @@ class _HomePageState extends State<HomePage> {
         child: ListView(
       children: <Widget>[
         Padding(
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
           child:
               Column(crossAxisAlignment: CrossAxisAlignment.stretch, children: <
                   Widget>[
             Text('Premieres',
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
-            SizedBox(height: 20),
+            SizedBox(height: 10),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: <Widget>[
                   Container(
-                    width: 240,
+                    width: 200,
                     child: Column(
                       children: [
                         Container(
@@ -77,7 +77,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                         ),
                         Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
                             Text(
                               'Big Hero6',
@@ -92,15 +92,19 @@ class _HomePageState extends State<HomePage> {
                               style: TextStyle(
                                   fontSize: 13,
                                   fontWeight: FontWeight.bold,
-                                  height: 1.5),
+                                  height: 1.5,
+                                  color: Colors.grey),
                             ),
                           ],
                         ),
                       ],
                     ),
                   ),
+                  SizedBox(
+                    width: 15,
+                  ),
                   Container(
-                    width: 240,
+                    width: 200,
                     child: Column(
                       children: [
                         Container(
@@ -135,20 +139,29 @@ class _HomePageState extends State<HomePage> {
                             ],
                           ),
                         ),
-                        Text(
-                          'Frozen 2',
-                          style: TextStyle(
-                            fontSize: 18,
-                            fontWeight: FontWeight.bold,
-                            height: 1.5,
-                          ),
+                        SizedBox(
+                          width: 10,
                         ),
-                        Text(
-                          '2019',
-                          style: TextStyle(
-                              fontSize: 13,
-                              fontWeight: FontWeight.bold,
-                              height: 1.5),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            Text(
+                              'Frozen 2',
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                height: 1.5,
+                              ),
+                            ),
+                            Text(
+                              '2019',
+                              style: TextStyle(
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.bold,
+                                  height: 1.5,
+                                  color: Colors.grey),
+                            ),
+                          ],
                         ),
                       ],
                     ),
@@ -157,7 +170,13 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             SizedBox(height: 20),
-            Text('In this week'),
+            Text(
+              'In this week',
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15,
+                  color: Colors.grey),
+            ),
             SizedBox(height: 20),
             SingleChildScrollView(
               scrollDirection: Axis.vertical,
